@@ -1,0 +1,42 @@
+                    //    The length of the sentence (the number of characters).
+ALGORITHM sen_lenghth
+VAR
+   sen : STRING := "this is an example for a sentence.";
+   count : INTEGER = 0;
+BEGIN
+    FOR (int  i=0 ; i<sen_lenghth() ; i++) DO
+    IF (sen[i]!='') THEN
+       count++;
+    END_IF
+    END_FOR
+    write (count)
+END
+
+            //   The number of words in the sentence (assuming that the words are separated by a single space).
+   ALGORITHM wrd_nbr
+VAR
+   sen : STRING := "this is an example for a sentence.";
+   count : INTEGER = 1;
+   BEGIN
+   FOR i in sen  DO
+   IF (i='') THEN
+  count +=1;
+   END_IF
+   END_FOR
+   write(count)
+   END
+            //   The number of vowels in the sentence.
+  ALGORITHM nbr_vow
+VAR
+   sen : STRING := "this is an example for a sentence.";
+   count : INTEGER = 0;
+   vowels : CHAR :=['a','e','i','o','u','y']
+      BEGIN
+FOR i in sen DO
+IF (i in vowels) THEN
+    count +=1;
+END_IF
+num_vowels = count;
+END_FOR
+write(num_vowels);
+END
